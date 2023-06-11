@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ProductSummary>
+<h1>Ürünler</h1>
+<div class="row">
+    <div class="col-12">
+        <div class="float-end">
+            <a class="btn btn-outline-primary btn-sm" asp-controller="Orders" asp-action="OrderDetails" >Sepete Git</a>
+        </div>
+        <div class="float-start col-4">
+            @if (TempData.ContainsKey("ResultMessage"))
+            {
+                <div class="alert alert-success">
+                    @TempData["ResultMessage"]
+                </div>
+            }
+        </div>
+        <form method="post" asp-controller="Orders" asp-action="Create">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Ürün Adı</th>
+                        <th>Fiyat</th>
+                        <th>Açıklama</th>
+                        <th>Malzemeler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="selectedProducts[]" value="@product.Id">
+                            </td>
+
+                            <td>@product.Name</td>
+                            <td>@product.Price.ToString("N2")₺</td>
+                            <td>@product.Description</td>
+                            <td>
+                                <ul>
+                                    @foreach (var ingredient in product.Ingredients)
+                                    {
+                                        <li>@ingredient.Name</li>
+                                    }
+                                </ul>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary">Sepete Ekle</button>
+        </form>
+    </div>
+</div>
+
+

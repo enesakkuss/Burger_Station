@@ -1,0 +1,62 @@
+﻿@model OrderDto
+<h1>Sepetiniz</h1>
+
+<div class="row">
+    <div class="col-5 col-sm-6 col-md-7 col-lg-8 col-xl-9">
+        <div class="float-end">
+            <a class="btn btn-outline-primary btn-sm" asp-controller="FinalOrders" asp-action="Create">Sepeti Onayla</a>
+            <a class="btn btn-outline-primary btn-sm" id="target">Bilgiler</a>
+        </div>
+        <div class="float-start col-4">
+            @if (TempData.ContainsKey("ResultMessage"))
+            {
+                <div class="alert alert-success">
+                    @TempData["ResultMessage"]
+                </div>
+            }
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Ürün Adı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var productId in ViewBag.OrderProducts)
+                {
+                    <tr>
+                        <td>@productId</td>
+                    </tr>
+                }
+             </tbody>
+        </table>
+        </div>
+    <div id="customer_create" class="col-5 col-sm-6 col-md-7 col-lg-8 col-xl-9">
+    </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#target").click(function () {
+                $.ajax({
+                    url: '@Url.Action("Create", "Customers")',
+                    type: 'GET',
+                    success: function (result) {
+                        $('#customer_create').html(result);
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+
+
+
+
+
+

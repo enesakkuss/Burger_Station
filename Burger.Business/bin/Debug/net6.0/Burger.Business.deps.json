@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Burger.Business/1.0.0": {
+        "dependencies": {
+          "Burger": "1.0.0",
+          "Burger.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Burger.Business.dll": {}
+        }
+      },
+      "Burger/1.0.0": {
+        "runtime": {
+          "Burger.dll": {}
+        }
+      },
+      "Burger.Domain/1.0.0": {
+        "dependencies": {
+          "Burger": "1.0.0"
+        },
+        "runtime": {
+          "Burger.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Burger.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Burger/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Burger.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

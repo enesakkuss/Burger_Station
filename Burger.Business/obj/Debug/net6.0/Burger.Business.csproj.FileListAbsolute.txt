@@ -1,0 +1,17 @@
+C:\Users\muham\source\repos\Burger\Burger.Business\bin\Debug\net6.0\Burger.Business.deps.json
+C:\Users\muham\source\repos\Burger\Burger.Business\bin\Debug\net6.0\Burger.Business.dll
+C:\Users\muham\source\repos\Burger\Burger.Business\bin\Debug\net6.0\Burger.Business.pdb
+C:\Users\muham\source\repos\Burger\Burger.Business\bin\Debug\net6.0\Burger.dll
+C:\Users\muham\source\repos\Burger\Burger.Business\bin\Debug\net6.0\Burger.Domain.dll
+C:\Users\muham\source\repos\Burger\Burger.Business\bin\Debug\net6.0\Burger.Domain.pdb
+C:\Users\muham\source\repos\Burger\Burger.Business\bin\Debug\net6.0\Burger.pdb
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.csproj.AssemblyReference.cache
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.AssemblyInfoInputs.cache
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.AssemblyInfo.cs
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.csproj.CoreCompileInputs.cache
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.csproj.CopyComplete
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.dll
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\refint\Burger.Business.dll
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\Burger.Business.pdb
+C:\Users\muham\source\repos\Burger\Burger.Business\obj\Debug\net6.0\ref\Burger.Business.dll

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BurgerStation.Domain/1.0.0": {
+        "dependencies": {
+          "BurgerStation": "1.0.0"
+        },
+        "runtime": {
+          "BurgerStation.Domain.dll": {}
+        }
+      },
+      "BurgerStation/1.0.0": {
+        "runtime": {
+          "BurgerStation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BurgerStation.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BurgerStation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

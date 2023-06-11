@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BurgerStation.WebApp.props" />
+</Project>

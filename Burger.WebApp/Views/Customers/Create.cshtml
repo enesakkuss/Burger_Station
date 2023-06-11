@@ -1,0 +1,85 @@
+﻿@model CustomerDto
+
+<h1>Kullanıcı Bilgileri</h1>
+<div class="row">
+    <div id="customer_create" class="col-12 col-sm-10 col-md-6 col-lg-4">
+        @if (TempData.ContainsKey("ResultMessage"))
+        {
+            <div class="alert alert-danger ">
+                @TempData["ResultMessage"]
+            </div>
+        }
+        <form asp-action="Create" asp-controller="Customers" method="post">
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label">İsim</label>
+                <input asp-for="FirstName" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label">Soyisim</label>
+                <input asp-for="LastName" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Mail" class="form-label">E-Posta</label>
+                <input asp-for="Mail" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="PhoneNumber" class="form-label">Telefon Numarası</label>
+                <input asp-for="PhoneNumber" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="DistrictId" class="form-label">İlçe</label>
+                <select asp-for="DistrictId" asp-items="ViewBag.Districts" class="form-select">
+                    <option value="">Lütfen Seçiniz</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="NeighborhoodId" class="form-label">Mahalle</label>
+                <select asp-for="NeighborhoodId" class="form-select"></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Address" class="form-label">Adres</label>
+                <input asp-for="Address" type="text" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <div class="float-end">
+                    <button class="btn btn-success" type="submit">Kaydet</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script>
+        $(document).ready(function () {
+            $('#DistrictId').change(function () {
+                let districtId = this.value;
+                $('#NeighborhoodId').html('');
+
+                $.ajax({
+                    type: 'get',
+                    url: '/Customers/GetByDistrictId?Id=' + districtId,
+                    dataType: 'json',
+                    success: function (neighborhoods) {
+                        if (neighborhoods.length) {
+                            let defaultOption = $('<option>').attr('value', '').text('Lütfen Seçiniz');
+                            $('#NeighborhoodId').append(defaultOption);
+                        }
+
+                        for (let i = 0; i < neighborhoods.length; i++) {
+                            let optionElement = $('<option>')
+                                .attr('value', neighborhoods[i].id)
+                                .text(neighborhoods[i].name);
+                            $('#NeighborhoodId').append(optionElement);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<IngredientDto>
+
+<h1>Malzemeler</h1>
+<div class="row">
+    <div class="col-12">
+        <div class="float-end">
+            <a class="btn btn-outline-primary btn-sm" asp-controller="Ingredients" asp-action="Create">Yeni Malzeme Ekle</a>
+        </div>
+        <div class="float-start col-9">
+            @if (TempData.ContainsKey("ResultMessage"))
+            {
+                <div class="alert alert-success">
+                    @TempData["ResultMessage"]
+                </div>
+            }
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Malzeme Adı</th>
+                    <th>Fiyat</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ingredient in Model)
+                {
+                    <div>
+                        <tr>
+                            <td>@ingredient.Id</td>
+                            <td>@ingredient.Name</td>
+                             @if (ingredient.Price.HasValue)
+                             {
+                            <td>@ingredient.Price?.ToString("N2")₺</td>
+                             }
+                             else
+                             {
+                                 <td>0</td>
+                             }
+                            <td class="text-end">
+                                <a class="btn btn-outline-success btn-sm" asp-controller="Ingredients" asp-action="Update" asp-route-id="@ingredient.Id">Düzenle</a>
+                                
+                                <form asp-action="Delete" method="post" class="delete-form d-inline-block">
+                                <input type="hidden" value="@ingredient.Id" name="Id">
+                                <button class="btn btn-outline-danger btn-sm">Sil</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </div>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        let deleteForms = document.getElementsByClassName('delete-form');
+
+        for (let i = 0; i < deleteForms.length; i++) {
+            deleteForms[i].addEventListener('submit', function (e) {
+
+                let isConfirmed = confirm('Dikkat Bu kayıt silinecek. Devam etmek istiyor musunuz?');
+                if (!isConfirmed) {
+                    e.preventDefault();
+                }
+            });
+        }
+    </script>
+}

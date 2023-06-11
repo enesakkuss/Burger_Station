@@ -1,0 +1,12 @@
+C:\Users\muham\source\repos\Burger\Burger\bin\Debug\net6.0\Burger.deps.json
+C:\Users\muham\source\repos\Burger\Burger\bin\Debug\net6.0\Burger.dll
+C:\Users\muham\source\repos\Burger\Burger\bin\Debug\net6.0\Burger.pdb
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\Burger.csproj.AssemblyReference.cache
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\Burger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\Burger.AssemblyInfoInputs.cache
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\Burger.AssemblyInfo.cs
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\Burger.csproj.CoreCompileInputs.cache
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\Burger.dll
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\refint\Burger.dll
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\Burger.pdb
+C:\Users\muham\source\repos\Burger\Burger\obj\Debug\net6.0\ref\Burger.dll

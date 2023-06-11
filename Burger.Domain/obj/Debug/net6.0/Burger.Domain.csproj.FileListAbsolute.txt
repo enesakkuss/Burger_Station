@@ -1,0 +1,15 @@
+C:\Users\muham\source\repos\Burger\Burger.Domain\bin\Debug\net6.0\Burger.Domain.deps.json
+C:\Users\muham\source\repos\Burger\Burger.Domain\bin\Debug\net6.0\Burger.Domain.dll
+C:\Users\muham\source\repos\Burger\Burger.Domain\bin\Debug\net6.0\Burger.Domain.pdb
+C:\Users\muham\source\repos\Burger\Burger.Domain\bin\Debug\net6.0\Burger.dll
+C:\Users\muham\source\repos\Burger\Burger.Domain\bin\Debug\net6.0\Burger.pdb
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.csproj.AssemblyReference.cache
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.AssemblyInfoInputs.cache
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.AssemblyInfo.cs
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.csproj.CoreCompileInputs.cache
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.csproj.CopyComplete
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.dll
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\refint\Burger.Domain.dll
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\Burger.Domain.pdb
+C:\Users\muham\source\repos\Burger\Burger.Domain\obj\Debug\net6.0\ref\Burger.Domain.dll

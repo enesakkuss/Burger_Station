@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CategoryDto>
+
+<h1>Kategoriler</h1>
+<div class="row">
+    <div class="col-12">
+        <div class="float-end">
+            <a class="btn btn-outline-primary btn-sm" asp-controller="Categories" asp-action="Create">Yeni Kategori Ekle</a>
+        </div>
+        <div class="float-start col-9">
+            @if (TempData.ContainsKey("ResultMessage"))
+            {
+                <div class="alert alert-success">
+                    @TempData["ResultMessage"]
+                </div>
+            }
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Kategori Adı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model)
+                {
+                    <div>
+                    <tr>
+                        <td>@category.Id</td>
+                        <td>@category.Name</td>
+                        <td class="text-end">
+                            <a class="btn btn-outline-success btn-sm" asp-controller="Categories" asp-action="Update" asp-route-id="@category.Id">Düzenle</a>
+
+                            <form asp-action="Delete" method="post" class="delete-form d-inline-block">
+                                <input type="hidden" value="@category.Id" name="Id">
+                                <button class="btn btn-outline-danger btn-sm">Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+        </div>
+                }
+    </tbody>
+    </table>
+</div>
+</div>
+
+@section Scripts{
+    <script>
+        let deleteForms = document.getElementsByClassName('delete-form');
+
+        for (let i = 0; i < deleteForms.length; i++) {
+            deleteForms[i].addEventListener('submit', function (e) {
+
+                let isConfirmed = confirm('Dikkat Bu kayıt silinecek. Devam etmek istiyor musunuz?');
+                if (!isConfirmed) {
+                    e.preventDefault();
+                }
+            });
+        }
+    </script>
+}
+
